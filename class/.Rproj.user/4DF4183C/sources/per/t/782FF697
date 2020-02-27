@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581321780267.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "782FF697",
+    "lastKnownWriteTime" : 2969334694756363315,
+    "last_content_update" : 1581321780267,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "52DD364F",
+        "caption" : "Department_performance",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Department_performance&cache_key=52DD364F",
+        "displayedObservations" : "41",
+        "environment" : "",
+        "expression" : "Department_performance",
+        "object" : "Department_performance",
+        "preview" : "0",
+        "totalObservations" : "41",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

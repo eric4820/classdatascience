@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581502715212.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C74E1CC1",
+    "lastKnownWriteTime" : 7810123700365321520,
+    "last_content_update" : 1581502715212,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "96C03367",
+        "caption" : "DAYS_OF_THE_MONTH_PERFORMANCE",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=DAYS_OF_THE_MONTH_PERFORMANCE&cache_key=96C03367",
+        "displayedObservations" : "31",
+        "environment" : "",
+        "expression" : "DAYS_OF_THE_MONTH_PERFORMANCE",
+        "object" : "DAYS_OF_THE_MONTH_PERFORMANCE",
+        "preview" : "0",
+        "totalObservations" : "31",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 29,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

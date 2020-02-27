@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581663931552.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F63225EA",
+    "lastKnownWriteTime" : 2314885436532078896,
+    "last_content_update" : 1581663931552,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C0D72EE6",
+        "caption" : "YEAR",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=YEAR&cache_key=C0D72EE6",
+        "displayedObservations" : "34",
+        "environment" : "",
+        "expression" : "YEAR",
+        "object" : "YEAR",
+        "preview" : "0",
+        "totalObservations" : "34",
+        "variables" : "3"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 23,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

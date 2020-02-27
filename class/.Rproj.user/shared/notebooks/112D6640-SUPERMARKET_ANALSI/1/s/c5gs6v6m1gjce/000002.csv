@@ -1,0 +1,28 @@
+"0",""
+"0",""
+"0"," "
+"0","DAYS_OF_THE_MONTH_PERFORMANCE <-SUPERMARKET%>%"
+"0","  select(total,day,month, supermarket)%>%"
+"0","  group_by(day)%>%"
+"0","  summarise(total = sum(total)) %>% "
+"0","  ungroup() %>%"
+"0","  mutate(day = as.integer(day))%>%"
+"0","  group_by(day) %>%"
+"0","  filter(!day == 	2305)%>%"
+"0","  summarise(total = sum(total)) %>%"
+"0","  arrange(desc(total))"
+"0","  na.omit"
+"1","function (object, ...) 
+"
+"1","UseMethod(""na.omit"")
+"
+"1","<bytecode: 0x000002c81887d460>
+"
+"1","<environment: namespace:stats>
+"
+"0","   "
+"0",""
+"0",""
+"0","#With the proof of the above analysis its noted that sales"
+"0","#are optimum on the 23 rd day of the month and then decrease towards"
+"0","#the mid-month of of the succeding month."

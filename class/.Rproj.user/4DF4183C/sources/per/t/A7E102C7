@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582095993363.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3900692262",
+    "id" : "A7E102C7",
+    "lastKnownWriteTime" : 1582109805,
+    "last_content_update" : 1582109806233,
+    "path" : "~/class/SUPERMARKET_ANALSI.Rmd",
+    "project_path" : "SUPERMARKET_ANALSI.Rmd",
+    "properties" : {
+        "cursorPosition" : "9,22",
+        "last_setup_crc32" : "",
+        "scrollLine" : "0",
+        "tempName" : "Untitled2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 42,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

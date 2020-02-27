@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581316957426.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2089070028",
+    "id" : "BCD48098",
+    "lastKnownWriteTime" : 1582371674,
+    "last_content_update" : 1582371674512,
+    "path" : "~/class/WEEK_2_DATA_MINING.R",
+    "project_path" : "WEEK_2_DATA_MINING.R",
+    "properties" : {
+        "cursorPosition" : "212,0",
+        "scrollLine" : "188",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

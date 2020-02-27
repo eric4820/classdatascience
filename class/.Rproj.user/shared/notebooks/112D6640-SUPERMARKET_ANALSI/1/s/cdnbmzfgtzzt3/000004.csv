@@ -1,0 +1,7 @@
+"0",""
+"0","  ggplot(SUPERMARKET, aes(y=total,x=no_of_items,col=food))+"
+"0","   geom_point(size = 3 )+geom_smooth(method=""lm"",se=F)+"
+"0","   labs(title = ""TOTAL MONEY VS NO OF ITEMS and food / non-food items"",y=""TOTAL MONEY"",x=""NO OF ITEMS"")+"
+"0","   theme(axis.text.x = element_text(angle = 45 ,vjust = 0.5))+"
+"0","  theme(plot.title = element_text(hjust = 0.5 ,face = ""bold""))+"
+"0","   theme(panel.background  = element_rect(fill = ""lightgreen""))"

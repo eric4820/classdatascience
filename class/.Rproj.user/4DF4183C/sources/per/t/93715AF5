@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581323411485.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "93715AF5",
+    "lastKnownWriteTime" : 8389765628431725409,
+    "last_content_update" : 1581323411485,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "9D2008DB",
+        "caption" : "Amazon",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Amazon&cache_key=9D2008DB",
+        "displayedObservations" : "451533",
+        "environment" : "",
+        "expression" : "Amazon",
+        "object" : "Amazon",
+        "preview" : "0",
+        "totalObservations" : "451533",
+        "variables" : "14"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

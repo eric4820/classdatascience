@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581323738621.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F5D58BD6",
+    "lastKnownWriteTime" : 7957704863871034658,
+    "last_content_update" : 1581323738621,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "4F9E2165",
+        "caption" : "BRAND_PERFORMANCE",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=BRAND_PERFORMANCE&cache_key=4F9E2165",
+        "displayedObservations" : "2072",
+        "environment" : "",
+        "expression" : "BRAND_PERFORMANCE",
+        "object" : "BRAND_PERFORMANCE",
+        "preview" : "0",
+        "totalObservations" : "2072",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,7 @@
+"0",""
+"0",""
+"0"," "
+"0","ggplot(YEAR,aes(y=total,x=factor(month)))+"
+"0","  geom_bar(stat=""identity"",fill=""forestgreen"")+"
+"0"," labs(x=""month"",y=""total"",title = ""MONTHS OF THE YEAR PERFORMANCE"")+"
+"0","  theme(panel.background = element_rect(fill = ""limegreen""))"

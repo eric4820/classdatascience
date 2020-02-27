@@ -1,0 +1,8 @@
+"0",""
+"0",""
+"0",""
+"0","ggplot(BOUGHT_BEVERAGE,aes(x=factor(month),y=count))+"
+"0","  geom_bar(stat = ""identity"",fill=""limegreen"")+"
+"0","labs(title = ""SALES OF BEVERAGE DURING THE YEAR"",x=""MONTH OF THE YEAR"",y=""NO OF BAVERAGES"")+"
+"0","  theme(plot.title = element_text(hjust = 0.5,colour =""green"",face = ""bold""))+"
+"0","  theme(panel.background = element_rect(fill=""palegreen""))"

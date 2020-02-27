@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581667171177.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4D9E86F8",
+    "lastKnownWriteTime" : 8386653886303269735,
+    "last_content_update" : 1581667171177,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "51EF997A",
+        "caption" : "infert",
+        "contentUrl" : "grid_resource/gridviewer.html?env=package%3Adatasets&obj=infert&cache_key=51EF997A",
+        "displayedObservations" : "248",
+        "environment" : "package:datasets",
+        "expression" : "infert",
+        "object" : "infert",
+        "preview" : "0",
+        "totalObservations" : "248",
+        "variables" : "8"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 25,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

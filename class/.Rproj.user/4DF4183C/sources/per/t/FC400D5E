@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581584700664.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FC400D5E",
+    "lastKnownWriteTime" : 1581583584,
+    "last_content_update" : 1581584700664,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "20D9C0BD",
+        "caption" : "PERFORMANCE_PER_MONTHS_OF_THE_YEAR",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=PERFORMANCE_PER_MONTHS_OF_THE_YEAR&cache_key=20D9C0BD",
+        "displayedObservations" : "12",
+        "environment" : "",
+        "expression" : "PERFORMANCE_PER_MONTHS_OF_THE_YEAR",
+        "object" : "PERFORMANCE_PER_MONTHS_OF_THE_YEAR",
+        "preview" : "0",
+        "totalObservations" : "12",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

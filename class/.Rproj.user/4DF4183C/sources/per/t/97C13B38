@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581668615410.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "97C13B38",
+    "lastKnownWriteTime" : 2127758115640,
+    "last_content_update" : 1581668615410,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "e6b0d3954bab48bf8afecb7a4ae77f27",
+        "name" : "sum_plot",
+        "title" : "sum_plot"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 28,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

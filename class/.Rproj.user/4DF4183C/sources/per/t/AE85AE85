@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582136136939.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3136366743",
+    "id" : "AE85AE85",
+    "lastKnownWriteTime" : 1582138841,
+    "last_content_update" : 1582138841911,
+    "path" : "~/class/PIE_CHART.R",
+    "project_path" : "PIE_CHART.R",
+    "properties" : {
+        "cursorPosition" : "10,2",
+        "scrollLine" : "0",
+        "tempName" : "Untitled2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 45,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,473 @@
+---
+title: "DAY__2"
+author: "eric"
+date: "2/22/2020"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# INTRODUCTION TO R
+## R operators
+Variable assignment operator  <-
+```{r}
+
+
+
+y <- "HELLO"
+y
+```
+#Arithmetic operators
+##Division of numbers with operator that give an answer to one decimal place if answeris not a whole number.  /
+```{r}
+
+5/2
+```
+#%/% This division give answer rounded to the lower immeadiate whole number if the answer is in decimal form.
+```{r}
+
+
+
+5%/%2
+```
+ %% This operator gives the modulas of two numbers.
+```{r}
+
+
+
+5%%2
+```
+
+
+# Assigning a vector to a variable
+```{r}
+
+idea <- c(9,92,100,263,9)
+mean (idea) #finding mean of values in vector idea.
+sd(idea)   #finding  stardard deviation of values in vector idea.
+var(idea)    #finding variance of values in vector idea.
+median(idea)   #finding median of values in vector idea.
+price1 <- c(100,200,NULL) # gives the  non-null values.
+price1
+price2 <- c(100,200,NA) # gives all values.
+price2
+is.na (price2) # finding missing values in vector price2.
+```
+# ------- intro to vectors--------
+```{r}
+
+
+
+age <- c(22,23,24,25)
+names(age) <- c("cate","tom","tom","andi")
+age
+age["andi"]
+```
+# --------- intro to lists----------------- 
+Assigning a list to a variable y
+```{r}
+
+
+
+y <- list(1,2,3,4)
+y
+```
+# Combining two vectors  into a list and assigning the list to variable data.
+```{r}
+
+
+
+data <- list(names1=c("cate","tom","tom","andi"),age1=c(23,24,25,26),retired=c(T,F))
+data
+
+```
+# extracting elements from data list using their indexes
+```{r}
+data$age1[3]
+data[[1]][3]
+```
+# combining vectors into lists
+```{r}
+
+
+
+product1 <- c("belt","brown","red","purple")
+ totalprice = c(1000,2000,3500,800)
+ color = c("black","blown","red","purple")
+ quantity = c(5,2,1,3)
+ sales <- list(product1,totalprice ,color,quantity)
+ sales
+ 
+```
+ 
+# Quick quiz
+ get the values brown, 800, black and 5 from sales and store them in varianbles of your choice
+```{r}
+
+
+#gets  index 1 of the sales list  and then precisely picks  the element on index 2 of the index 1 of sales. and assigns it to variable p.
+p <- sales[[1]][2]
+p
+#gets  index 2 of the sales data list  and then precisely picks  the element on index 4 of the index 2 of sales.and assigns it to variable t.
+t <- sales[[2]] [4]
+t
+
+#gets  index 2 of the sales data list  and then precisely picks  the element on index 1 of the index 3 of sales.and assigns it to variable c.
+c <- sales[[3]][1]
+c
+
+
+#gets  index 4 of the sales list  and then precisely picks  the element on index 1 of the index 4 of sales.and assigns it to variable t.
+q <- sales[[4]][1] 
+q
+```
+# ----------------intro to data.frames
+creating a table  dataset .
+```{r}
+
+
+
+product1 <- data.frame(product1,totalprice,color,quantity)
+product2 <-data.frame (product1,totalprice,color,quantity, stringsAsFactors=F)
+product2
+
+#view the elements in the product2 dataframe 
+
+View(product2)
+
+#view the structure of dataframes :product1 and product2
+str(product1)
+str(product2)
+
+#access the element(s) in  the various indexes of product2 data frame
+product2[,2]
+product2[2,]
+product2[[2]][1]
+product2[["totalprice"]]
+```
+# installing and the loading package datasets
+```{r}
+
+
+
+installed.packages("datasets")
+library(datasets)
+```
+# loading and viewing the  airquality dataset and its structure.
+```{r}
+
+
+
+data(airquality)
+View(airquality)
+str(airquality)
+```
+# summarises the air quality dataset and find its column metrics :mean ,median ,minimum and maximum values etc.
+```{r}
+
+
+
+summary(airquality)
+```
+# a look into the airquality dataset.
+```{r}
+
+
+
+head(airquality,15)#gives the first 15 rows in dataset airquality.
+tail(airquality)# gives the last 5 rows in dataset airquality.
+(View  ((tail)(airquality))) #gives the 5 last row of the dataset as a table.
+is.na(airquality) # gives the missing data in dataset airquality.
+sum(is.na(airquality)) #gives the sum of missing values in the dataset.
+which(is.na(airquality)) #gives the exact locations of the missing values in dataset airquality.
+sum(is.na(airquality$Solar.R))# gives the  sum of missing values in column solar.r of dataset airquality
+sum(is.na(airquality$Ozone))# gives the  sum of missing values in column oxone  of dataset airquality.
+names(airquality) #gives the column names of the dataset.
+colnames(airquality) # it also gives the column names of the dataset.
+dim(airquality) #give the dimmensional state  of the dataset  i.e number of columns and number of rows.
+nrow(airquality) #give the number of rows in the dataset
+ncol(airquality)  #give the number of columns in the dataset
+which(airquality$Temp==69)  #gives the index at which in the temp column of airquality dataset the value is 69.
+```
+
+# loading and viewing the  mtcars dataset and its structure.
+```{r}
+
+
+
+mtcars
+data(mtcars)
+View(mtcars)
+str(mtcars)
+```
+#  A LOOK AT DIFFERENT FEATURES OF THE DATASET.
+```{r}
+summary(mtcars)#summarises the air quality dataset and find its column metrics :mean ,median ,minimum and maximum values etc.
+head(mtcars,15)#this gives the first 15 rows of the mtcars dataset. 
+tail(mtcars,2) #this gives the last 2 rows  of the mtcars dataset.
+(View  ((tail)(mtcars,5))) #this gives the last 5 rows  of the mtcars dataset as a table.
+is.na(mtcars) #gives the missing values in the mtcars dataset.
+sum(is.na(mtcars))#gives the sum of missing values in the mtcars dataset.
+which(is.na(mtcars)) #gives the index of the missing values in the mtcars dataset.
+sum(is.na(mtcars$cyl))#gives the sum of missing values in the cyl column of the mtcars dataset.
+sum(is.na(mtcars$disp))#gives the sum of missing values in the disp column of the mtcars dataset.
+names(mtcars) #gives the column names
+colnames(mtcars)#gives the column names
+dim(mtcars) # gives the dimmension of the dataset i.e number of columns and number of rows.
+nrow(mtcars) # gives no of rows in the dataset
+ncol(mtcars) #gives no of columns in the dataset.
+
+
+View(which(mtcars$cyl==4 & mtcars$vs==0))  # returns the column name  with cyt 0f 275 and vs of 0 if available.
+sum(is.na(mtcars))
+mtcars[["wt"]]# gives the values in the column wt in dataset mtcars.
+
+```
+# combining vectors into a dataframe.
+and accesing values in the formed data frame.
+```{r}
+
+
+
+names <- c("dau","jabber","mwendwa","wanza")
+age <- c(19,2,2,49)
+sales <- c(2000,1500,1800,3000)
+month <- c("nov","dec","oct","nov")
+data.frame(names,age,sales,month)
+customer_details <- data.frame(names,age,sales,month)
+customer_details[,3]  
+```
+# ANOTHER LOOK AT DATASET MTCARS
+```{r}
+
+
+
+data("mtcars") #loading the dataset.
+?mtcars # help in deep understanding of the dataset.
+mtcars[,1]# gives the values of the values in the  first column of mtcars dataset.
+row.names(mtcars) #gives the rownames.
+colnames(mtcars)# gives the column names.
+colnames(mtcars)[colnames(mtcars)=="cyl"] #searches the value where the column name is cyl.
+```
+# renaming columns
+and setting the new column names as factors.
+```{r}
+colnames(mtcars)[colnames(mtcars)=="cyl"] <- "cyla"
+
+mtcars[1:10,]
+head(mtcars$vs,10)
+str(mtcars)
+View(mtcars)
+mtcars$vs <- as.factor(mtcars$vs)
+str(mtcars)
+
+str(mtcars)
+colnames(mtcars)<-c("name","genus","order","vore","sleep_total","qw","er","ty","ui","as","df")
+mtcars_new <- mtcars[,colnames(mtcars)]
+View(mtcars_new )
+table(mtcars$genus)
+rownames(mtcars_new)[row.names(mtcars_new)=="Valiant"] <- "mac x"
+(row.names(mtcars_new))
+as.factor(mtcars_new)
+```
+# dates in r  -----
+loading library lubridate
+```{r}
+
+
+
+library(lubridate)
+```
+#DATES IN R --
+  Create  data and time values and assign them to variable leo and then view structure of variable leo. shows they are in character form.
+```{r}
+
+
+ 
+leo <- ("21-01-2020 09:56:03")
+str(leo)
+```
+# initialize the dates /time function in use with variable leo and 
+assign it to reassign the variable leo to variable leol
+view structure of variable leol
+```{r}
+
+
+
+leol <- dmy_hms(leo)
+str(leol)
+```
+# using the dates function  assign leol values  to a new precise variable and then view them but in number for instead of specific month/day name.
+```{r}
+
+
+
+leol_second <- second(leol)
+leol_second
+leol_minute <- minute(leol)
+leol_minute
+leol_hour <- hour(leol)
+leol_hour
+leol_month <- month(leol)
+leol_month
+leol_year <- year(leol)
+leol_year
+```
+# label =T ,gives the days /month name 
+abbr=T ,gives the month/day name in a abbreviated form,;for instance monday given as mon ,december as dec.
+```{r}
+
+
+
+leol_day <- wday(leol,label=T,abbr=T)
+leol_day
+leol_month <- month(leol,label=T,abbr=T)
+leol_month
+```
+
+#-------r  mini project
+Importing data from file "amazon_kenya_data"
+and loading package tidyverse to facilitate piping of the data.
+```{r}
+library(tidyverse)
+Amazon <- read.csv("E:/Documents/class/amazon_kenya_data.csv",stringsAsFactors = F)
+
+```
+# A look at dataset amazon
+```{r}
+
+
+
+str(Amazon) #checking the structure of amazon dataset.
+summary(Amazon) ##summarises the air quality dataset and find its column metrics :mean ,median ,minimum and maximum values etc.
+head(Amazon,15) # this gives the first 15 rows of the amazon dataset.
+View(Amazon) #to check the amazon dataset table .
+table(Amazon$NAIVAS.BRANCH)#to check contents and frequency of values of the naivas branch of the amazon dataset table .
+table(Amazon$DEPARTMENT)#to check contents and frequency of values of the department column of the amazon dataset table .
+table(Amazon$CATEGORY)#to check contents and frequency of values of the category column of the amazon dataset table .
+dim(Amazon) # to check the dimmension ;no of rows and columns in the dataset.
+colnames(Amazon) # to check the number and names of columns in the amazon dataset.
+rownames(Amazon)# to check the number of  rows in the amazon dataset.
+```
+# Creating a new column total price in the amazon dataset.
+```{r}
+
+
+
+Amazon$TOTAL_PRICE <- (Amazon$ITEM.PRICE*Amazon$QUANTITY.PURCHASED)
+```
+#Extracting the number of item in category fat and oils while showing their total price
+```{r}
+
+
+
+FAT_oils <- Amazon %>%
+  select(CATEGORY,TOTAL_PRICE)%>% 
+  filter(CATEGORY=="FATS & OILS") 
+table(FAT_oils)
+```
+#Extracting the number of item in category  beverage while showing their total price.
+```{r}
+
+
+
+BEVERANGES <- (Amazon)%>% 
+  select(CATEGORY,TOTAL_PRICE)%>% 
+  filter(CATEGORY=="BEVERAGE") %>% group_by(CATEGORY) %>% summarise(sum(TOTAL_PRICE))
+table(BEVERANGES)
+```
+#DEPARTMENT PERFORMANCE
+```{r}
+
+
+
+Department_performance <- Amazon %>% 
+  select(DEPARTMENT, TOTAL_PRICE) %>%
+  group_by(DEPARTMENT)%>%
+  summarise(TOTAL_PRICE = sum(TOTAL_PRICE))
+```
+# Names of departments in the amazon dataset.
+```{r}
+
+
+
+names(table(Amazon$DEPARTMENT)) 
+```
+ #  DATA ANALYSIS
+ CATEGORY_PERFORMANCE
+```{r}
+
+
+ 
+CATEGORY_PERFORMANCE <- Amazon%>% select(CATEGORY,TOTAL_PRICE)%>%
+  group_by(CATEGORY)%>%
+  summarise(TOTAL_PRICE=sum(TOTAL_PRICE))
+```
+# ITEM PERFORMANCE
+```{r}
+
+
+
+ITEM_PERFORMANCE <- Amazon%>% select(ITEM.DESCRIPTION,TOTAL_PRICE)%>%
+  group_by(ITEM.DESCRIPTION)%>%
+  summarise(TOTAL_PRICE=sum(TOTAL_PRICE))
+```
+# BRAND PERFORMANCE
+```{r}
+
+
+
+BRAND_PERFORMANCE <- Amazon%>% select(BRAND,TOTAL_PRICE)%>%
+  group_by(BRAND)%>%
+  summarise(TOTAL_PRICE=sum(TOTAL_PRICE))
+```
+# BRANCH PERFORMANCE
+```{r}
+
+
+
+BRANCH_PERFORMANCE <- Amazon%>% select(NAIVAS.BRANCH,TOTAL_PRICE)%>%
+  group_by(NAIVAS.BRANCH)%>%
+  summarise(TOTAL_PRICE=mean(TOTAL_PRICE))
+```
+# CUSTOMER PERFORMANCE IN   NUMBER OF TRANSACTIONS MADE
+```{r}
+
+
+
+CUSTOMER_PERFORMANCE <- Amazon%>% select(CUSTOMER.NAME,CUSTOMER.ID,TOTAL_PRICE)%>%
+  group_by(CUSTOMER.NAME )%>%
+  summarise (count=n())
+```
+# CUSTOMER PERFORMANCE IN  RELATION TO TOTALS
+```{r}
+
+
+
+CUSTOMER_PERFORMANCE <- Amazon%>% select(CUSTOMER.NAME,CUSTOMER.ID,TOTAL_PRICE)%>%
+  group_by(CUSTOMER.NAME )%>%
+  summarise (sum(TOTAL_PRICE))
+```
+# CUSTOMER FREQUENCY
+```{r}
+
+
+
+CUSTOMER_FREQUENCY <- Amazon%>% select(CUSTOMER.NAME,CUSTOMER.ID,TOTAL_PRICE)%>%
+  group_by(CUSTOMER.NAME )%>%
+  summarise (count=n())
+
+```
+
+
+
+
+

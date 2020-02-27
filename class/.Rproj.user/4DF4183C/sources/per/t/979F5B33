@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581323548964.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "979F5B33",
+    "lastKnownWriteTime" : 1888815611904,
+    "last_content_update" : 1581323548964,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C039E5C6",
+        "caption" : "CATEGORY_PERFORMANCE",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=CATEGORY_PERFORMANCE&cache_key=C039E5C6",
+        "displayedObservations" : "153",
+        "environment" : "",
+        "expression" : "CATEGORY_PERFORMANCE",
+        "object" : "CATEGORY_PERFORMANCE",
+        "preview" : "0",
+        "totalObservations" : "153",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

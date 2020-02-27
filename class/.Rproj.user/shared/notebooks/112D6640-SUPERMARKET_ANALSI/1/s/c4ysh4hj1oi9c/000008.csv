@@ -1,0 +1,6 @@
+"0","ggplot(SUPERMARKET,aes(x=total ))+"
+"0","   geom_histogram(position=""identity"",bins=60,fill = ""green"")+"
+"0","   scale_x_log10()+"
+"0","   labs(title = ""THE FREQUENCY OF THE DIFFERENT TOTALS OF SHOPPING"",x=""TOTAL MONEY"",y=""count"")+"
+"0","   theme(panel.background =element_rect(fill=""darkolivegreen""))+"
+"0","   theme(plot.title  = element_text(colour =""darkgreen"",face = ""bold"",hjust = 0.5))"

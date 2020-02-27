@@ -1,0 +1,154 @@
+y <- "HELLO"
+Y
+5/2
+5%/%2
+5%%2
+2!3
+idea <- c(9,92,100,263,9)
+mean (idea)
+sd(idea)
+var(idea)
+median(idea)
+price1 <- C(100,200,NULL)
+price1
+price2 <- c(100,200,NA)
+price2
+is.na (price2)
+
+#------- intro to vectors--------
+
+age <- c(22,23,24,25)
+names(age) <- c("cate","tom","tom","andi")
+age
+age["andi"]
+
+#--------- intro to lists----------------- 
+y <- list(1,2,3,4)
+y
+data <- list(names1=c("cate","tom","tom","andi"),age1=c(23,24,25,26),retired=c(T,F))
+data
+data$age1[3]
+data[[1]][3]
+
+
+product <- c("belt","brown","red","purple")
+ totalprice = c(1000,2000,3500,800)
+ color = c("black","blown","red","purple")
+ quantity = c(5,2,1,3)
+ sales <- list(product,totalprice ,color,quantity)
+ sales
+# Quick quiz
+# get the values brown, 800, black and 5 from sales and store them in varianbles of your choice
+p <- sales[[1]][2]
+p
+t <- sales[[2]] [4]
+t
+c <- sales[[3]][1]
+c
+q <- sales[[4]][1] 
+q
+#----------------intro to data.frames
+product <- data.frame(product,totalprice,color,quantity)
+product2 <-data.frame (product,totalprice,color,quantity, stringsAsFactors=F)
+product
+View(product)
+str(product)
+str(product2)
+product[,2]
+product[2,]
+product[[2]][1]
+product[["totalprice"]]
+installed.packages("datasets")
+library(datasets)
+data(airquality)
+View(airquality)
+str(airquality)
+summary(airquality)
+head(airquality,15)
+tail(airquality)
+(View  ((tail)(airquality)))
+is.na(airquality)
+sum(is.na(airquality))
+which(is.na(airquality))
+sum(is.na(airquality$Solar.R))
+sum(is.na(airquality$Ozone))
+names(airquality)
+colnames(airquality)
+dim(airquality)
+nrow(airquality)
+ncol(airquality)
+which(airquality$Temp==69)
+mtcars
+data(mtcars)
+View(mtcars)
+str(mtcars)
+summary(mtcars)
+head(mtcars,15)
+tail(mtcars,2)
+(View  ((tail)(mtcars,5)))
+is.na(mtcars)
+sum(is.na(mtcars))
+which(is.na(mtcars))
+sum(is.na(mtcars$cyl))
+sum(is.na(mtcars$disp))
+names(mtcars)
+colnames(mtcars)
+dim(mtcars)
+nrow(mtcars)
+ncol(mtcars)
+View(which(mtcars$cyt==275&mtcars$vs==0))
+sum(is.na(mtcars))
+mtcars[["wt"]]
+names <- c("dau","jabber","mwendwa","wanza")
+age <- c(19,2,2,49)
+sales <- c(2000,1500,1800,3000)
+month <- c("nov","dec","oct","nov")
+data.frame(names,age,sales,month)
+custmer_details <- data.frame(names,age,sales,month)
+custmer_details[,3]
+data("mtcars")
+?mtcars
+#mtcars[,1]
+row.names(mtcars)
+colnames(mtcars)
+colnames(mtcars)[colnames(mtcars)=="cyl"]
+#renaming columns
+colnames(mtcars)[colnames(mtcars)=="cyl"] <- "cyla"
+mtcars[1:10,]
+head(mtcars$vs,10)
+str(mtcars)
+View(mtcars)
+mtcars$vs <- as.factor(mtcars$vs)
+str(mtcars)
+mtcars$conservation <- as.factor(mtcars$conservation)
+str(mtcars)
+colnames(mtcars)<-c("name","genus","order","vore","sleep_total","qw","er","ty","ui","as","df")
+mtcars_new <- mtcars[,colnames]
+View(mtcars_new )
+table(mtcars$genus)
+rownames(mtcars_new)[row.names(mtcars_new)=="Valiant"] <- "mac x"
+(row.names(mtcars_new))
+as.factor(mtcars_new)
+#dates in r
+library(lubridate)
+leo <- ("21-01-2020 09:56:03")
+str(leo)
+leol <- dmy_hms(leo)
+str(leol)
+leol_second <- second(leol)
+leol_second
+leol_minute <- minute(leol)
+leol_minute
+leol_hour <- hour(leol)
+leol_hour
+leol_month <- month(leol)
+leol_month
+leol_year <- year(leol)
+leol_year
+leol_day <- wday(leol,label=T,abbr=T)
+leol_day
+leol_month <- month(leol,label=T,abbr=T)
+leol_month
+
+mtcars
+

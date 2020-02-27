@@ -1,0 +1,8 @@
+"0",""
+"0",""
+"0","ggplot(SUPERMARKET,aes(x=total ))+"
+"0","   geom_freqpoly(size=1,position=""identity"",bins=60,col=""green"")+"
+"0","   scale_x_log10()+"
+"0","   labs(title = ""THE FREQUENCY OF THE DIFFERENT TOTALS OF SHOPPING"",x=""TOTAL MONEY"",y=""count"")+"
+"0","   theme(panel.background =element_rect(fill=""mediumseagreen""))+"
+"0","   theme(plot.title  = element_text(colour =""darkgreen"",face = ""bold"",hjust = 0.5))"

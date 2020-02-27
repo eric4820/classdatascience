@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581589530578.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EE7813F0",
+    "lastKnownWriteTime" : 1953734911576,
+    "last_content_update" : 1581589530578,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "298F0E5E",
+        "caption" : "BOUGHT_FOOD_AND_SNACK_AND_BEVERAGE",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=BOUGHT_FOOD_AND_SNACK_AND_BEVERAGE&cache_key=298F0E5E",
+        "displayedObservations" : "10",
+        "environment" : "",
+        "expression" : "BOUGHT_FOOD_AND_SNACK_AND_BEVERAGE",
+        "object" : "BOUGHT_FOOD_AND_SNACK_AND_BEVERAGE",
+        "preview" : "0",
+        "totalObservations" : "10",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 21,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

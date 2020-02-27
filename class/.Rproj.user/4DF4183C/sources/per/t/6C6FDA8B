@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582103425956.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2130167396",
+    "id" : "6C6FDA8B",
+    "lastKnownWriteTime" : 1582282118,
+    "last_content_update" : 1582282118442,
+    "path" : "B:/erick/Documents/day_2.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "4,7",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 43,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

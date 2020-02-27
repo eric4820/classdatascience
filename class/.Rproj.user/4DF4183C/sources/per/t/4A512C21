@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581577459504.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4033772488",
+    "id" : "4A512C21",
+    "lastKnownWriteTime" : 1582109956,
+    "last_content_update" : 1582109956330,
+    "path" : "~/class/SUPERMARKET_ANALSIS.R",
+    "project_path" : "SUPERMARKET_ANALSIS.R",
+    "properties" : {
+        "cursorPosition" : "391,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 41,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

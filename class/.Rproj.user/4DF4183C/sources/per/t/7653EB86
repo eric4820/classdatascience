@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581585506892.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7653EB86",
+    "lastKnownWriteTime" : 8104338726696264226,
+    "last_content_update" : 1581585506892,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "1718CE64",
+        "caption" : "BOUGHT_FOOD",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=BOUGHT_FOOD&cache_key=1718CE64",
+        "displayedObservations" : "20",
+        "environment" : "",
+        "expression" : "BOUGHT_FOOD",
+        "object" : "BOUGHT_FOOD",
+        "preview" : "0",
+        "totalObservations" : "20",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

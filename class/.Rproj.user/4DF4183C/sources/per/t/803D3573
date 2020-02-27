@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581586039953.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "803D3573",
+    "lastKnownWriteTime" : 3548067076488918113,
+    "last_content_update" : 1581586039953,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "77021DC1",
+        "caption" : "supermarket_OPEN_24_HR_performance",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=supermarket_OPEN_24_HR_performance&cache_key=77021DC1",
+        "displayedObservations" : 1,
+        "environment" : "",
+        "expression" : "supermarket_OPEN_24_HR_performance",
+        "object" : "supermarket_OPEN_24_HR_performance",
+        "preview" : 0,
+        "totalObservations" : 1,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 16,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

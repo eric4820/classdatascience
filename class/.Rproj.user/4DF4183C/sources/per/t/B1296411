@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581676210580.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B1296411",
+    "lastKnownWriteTime" : 2127758115640,
+    "last_content_update" : 1581676210580,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "1796744926514d57846243c75215fb42",
+        "name" : "LOCATION_SUPERMARKET_PERFORMANCE",
+        "title" : "LOCATION_SUPERMARKET_PERFORMANCE"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 32,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

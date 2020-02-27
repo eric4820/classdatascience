@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581678779315.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "87FBD640",
+    "lastKnownWriteTime" : 2127758115640,
+    "last_content_update" : 1581678779315,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E18FD718",
+        "caption" : "MALLS_AREA_OF_LOCATION",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=MALLS_AREA_OF_LOCATION&cache_key=E18FD718",
+        "displayedObservations" : 11,
+        "environment" : "",
+        "expression" : "MALLS_AREA_OF_LOCATION",
+        "object" : "MALLS_AREA_OF_LOCATION",
+        "preview" : 0,
+        "totalObservations" : 11,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 35,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

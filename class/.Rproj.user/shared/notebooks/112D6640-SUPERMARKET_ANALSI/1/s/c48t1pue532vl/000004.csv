@@ -1,0 +1,8 @@
+"0",""
+"0",""
+"0"," "
+"0","ggplot(DAYS_OF_THE_MONTH_PERFORMANCE,aes(x=factor(day),y=total))+"
+"0","  geom_bar(stat=""identity"",fill=""darkolivegreen"")+"
+"0","  labs(title = ""DAYS OF THE MONTH PERFORMANCE"",x=""day of the month"",y=""totals MONEY"")+"
+"0","theme(plot.title = element_text(hjust = 0.5,face = ""bold"",colour = ""darkgreen""))+"
+"0","  theme(panel.background = element_rect(fill=""lightgreen""))"

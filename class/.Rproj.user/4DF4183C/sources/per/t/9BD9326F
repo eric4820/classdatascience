@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582104694798.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9BD9326F",
+    "lastKnownWriteTime" : 8026363914660965410,
+    "last_content_update" : 1582104694798,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E0DCE515",
+        "caption" : "SUPERMARKET",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=SUPERMARKET&cache_key=E0DCE515",
+        "displayedObservations" : 1463,
+        "environment" : "",
+        "expression" : "SUPERMARKET",
+        "object" : "SUPERMARKET",
+        "preview" : 0,
+        "totalObservations" : 1463,
+        "variables" : 27
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 43,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

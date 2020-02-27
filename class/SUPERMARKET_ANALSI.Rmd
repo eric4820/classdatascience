@@ -1,0 +1,540 @@
+---
+title: "SUPERMARKET_ANALSIS"
+author: "eric"
+date: "2/19/2020"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+#This is a supermarket dataset.
+##To facilitate better bussiness decision making data analysis is
+##a necessity.
+## Calling necessary libraries
+```{r}
+
+
+
+library(tidyverse)
+library(ggplot2)
+library(gganimate)
+```
+#Importing data
+```{r}
+
+
+
+SUPERMARKET <- read.csv("Supermarket Dataset.csv",stringsAsFactors = F)
+```
+#Cleaning data.
+```{r}
+SUPERMARKET[296,"date"] <- "27/06/17"
+SUPERMARKET[297,"date"]
+#-----------------------
+index <- which(SUPERMARKET$date =="28-06-17")
+SUPERMARKET[index,"date"] <- "28/06/17"
+#-----------------------
+which(SUPERMARKET$date == "17?06")
+table(SUPERMARKET$date)
+
+#separating columns date   and time
+SUPERMARKET <- SUPERMARKET%>% separate(col=date ,into = c("day","month","year"),sep = "/")
+SUPERMARKET <- SUPERMARKET%>% separate(col=time ,into = c("hour","minute"),sep = ":")
+```
+#checking indexes and removing anomalies data.
+
+
+```{r}
+table(SUPERMARKET$day)
+
+index <- which(SUPERMARKET$day =="17?06" |SUPERMARKET$day =="2305")
+SUPERMARKET <- SUPERMARKET[-c(768),]
+  
+```
+#ANALYSIS
+SUPERMARKETS PERFORMANCE
+```{r}
+
+
+
+supermarket_performance <- SUPERMARKET%>%
+  select(total,supermarket)%>%
+  group_by(supermarket)%>%
+  summarise(total = sum(total)) %>% 
+  arrange(desc(total))
+#It has been noted above that NAKUMATT SUPERMARKETS ARE THE BEST IN FINANCIAL PERFOMANCE.
+#However kassmart supermarkets and foodplus lugs behind in the performance list.
+```
+
+
+#BUSINESS LOCATION PERFORMANCE  ANALYSIS
+```{r}
+
+
+
+LOCATION_PERFORMANCE<- SUPERMARKET%>%
+  select(total,location,supermarket)%>%
+  group_by(location)%>%
+  summarise(total = sum(total))%>%
+  arrange(desc(total))
+#Location performance analysis proofs that
+#supermarket business in the cbd is the best.
+#However karasha  location and kericho town  location  have the worst business performance.
+```
+
+#MODE OF PAYMENTS PERFORMANCE  ANALYSIS
+```{r}
+
+
+mode_of_PAYMENT_PERFORMANCE <- SUPERMARKET%>%
+  select(total,type,supermarket)%>%
+  group_by(type)%>%
+  summarise(total = sum(total)) %>%
+  arrange(desc(total))
+#From the above mode of payment analysis its crear that most customers still
+#prefer cash payments.Payments using the voucher is
+#the most unpopular mode of payment.
+```
+
+#DAYS_OF_THE_MONTH_PERFORMANCE ANALYSIS
+```{r}
+
+
+ 
+DAYS_OF_THE_MONTH_PERFORMANCE <-SUPERMARKET%>%
+  select(total,day,month, supermarket)%>%
+  group_by(day)%>%
+  summarise(total = sum(total)) %>% 
+  ungroup() %>%
+  mutate(day = as.integer(day))%>%
+  group_by(day) %>%
+  filter(!day == 	2305)%>%
+  summarise(total = sum(total)) %>%
+  arrange(desc(total))
+  na.omit
+   
+
+
+#With the proof of the above analysis its noted that sales
+#are optimum on the 23 rd day of the month and then decrease towards
+#the mid-month of of the succeding month.
+```
+
+#PERFORMANCE_PER_MONTHS_OF_THE_YEAR ANALYSIS
+```{r}
+
+
+
+PERFORMANCE_PER_MONTHS_OF_THE_YEAR <- SUPERMARKET%>%
+  select(total,month,supermarket)%>%
+  mutate(month = as.integer(month))%>%
+  group_by(month)%>%
+  summarise(total = sum(total)) %>%
+  filter(!month == 2017)%>%
+arrange(desc(total))
+  
+#From the above months of the year  financial analysis it can be induced that  best performing
+#month is month ,may with  a total value of sales being  of 114102.90 ,while month feb
+#is the worst performing month with
+#a total value of sales being 90.00 .
+
+```
+
+#DAY_TYPE_performance
+```{r}
+
+
+
+DAY_TYPE_performance <- SUPERMARKET%>%
+  select(total,day_type)%>%
+  group_by(day_type)%>%
+  summarise(meantotal=  mean(total))%>%
+arrange(desc(meantotal))
+#On average weekends supermarkets seemed to be performing better than on weekdays.
+#This suggests that many customers shop during weekends.
+```
+
+#24 HOUR BUSINESS OPERATION ANALYSIS
+```{r}
+
+
+
+supermarkets_OPEN_24_HR_VS_NOT <- SUPERMARKET%>%
+  select(total,open_24_hr,supermarket)%>%
+  group_by(open_24_hr)%>%
+  summarise(count= n())%>%
+arrange(desc(count))
+supermarket_OPEN_24_HR_performance <- SUPERMARKET%>%
+  select(total,open_24_hr)%>%
+  filter(open_24_hr=="yes")%>%
+  group_by(open_24_hr)%>%
+  summarise(mean=mean(total))%>%
+arrange(desc(mean))
+supermarket_not_OPEN_24_HR_performance <- SUPERMARKET%>%
+    select(total,open_24_hr)%>%
+    filter(open_24_hr=="no")%>%
+    group_by(open_24_hr)%>%
+    summarise(mean=mean(total))%>%
+arrange(desc(mean))
+#In the above analysis it is proved that the number non-24-hr supermarkets is greater than the 
+#number of 24-hr-supermarkets.
+#Moreover the average performance of non-24-hr supermarkets is better than the one
+#for 24-hr-based supermarkets.
+```
+
+
+#FOOD_SALES_ANALYSIS
+```{r}
+
+
+
+BOUGHT_FOOD <- SUPERMARKET%>%
+  select(total,food,location,supermarket)%>%
+  filter(food=="yes")%>%
+  group_by(location)%>%
+  summarise(count= n())%>%
+arrange(desc(count))
+#It was noted that food sales were highest in the cbd location with a total sales
+#transactions being 349.
+```
+#FOOD_AND_SNACK_COMBINATION_SALES_ANALYSIS
+```{r}
+
+
+
+BOUGHT_FOOD_AND_SNACK <- SUPERMARKET%>%
+  select(total,food,snack,location,supermarket)%>%
+  filter(food=="yes",snack=="yes")%>%
+  group_by(location)%>%
+  summarise(count= n())%>%
+  arrange(desc(count))
+#It was noted,from the above analysis that food and snacks combination sales were best in the 
+#cbd location with a total number of  the transactions being 82.
+```
+#FOOD_AND_SNACK_BEVERAGE_COMBINATION_SALES_ANALYSIS
+```{r}
+
+
+
+BOUGHT_FOOD_AND_SNACK_AND_BEVERAGE <- SUPERMARKET%>%
+  select(total,food,snack,beverage,location,supermarket)%>%
+  filter(food=="yes",snack=="yes",beverage=="yes")%>%
+  group_by(location)%>%
+  summarise(count= n())%>%
+  arrange(desc(count))
+#From the above analysis it was clear that the food and snack and beverage (together) transactions
+#were most in the cbd location with a total number of transactions being 31.
+```
+
+
+#BEVERAGE_and_SNACKS_SALES_ANALYSIS
+```{r}
+
+
+
+BOUGHT_BEVERAGE_and_snacks <- SUPERMARKET%>%
+  select(total,food,beverage,snack,location,supermarket)%>%
+  filter(beverage=="yes",snack=="yes")%>%
+  group_by(location)%>%
+  summarise(count= n())%>%
+  arrange(desc(count))
+#It was noted,from the above analysis that beverages and snacks combination (together) sales were best in the 
+#cbd location with a total number of  the transactions being 81.
+
+```
+
+
+#SNACK__SALES_ANALYSIS
+```{r}
+
+
+
+BOUGHT_SNACK <- SUPERMARKET%>%
+  select(total,food,snack,location,supermarket)%>%
+  filter(snack=="yes")%>%
+  group_by(location)%>%
+  summarise(count= n())%>%
+  arrange(desc(count))
+#It was noted,from the above analysis that  consumables sales were best in the 
+#cbd location with a total number of  the transactions being 288.
+
+
+
+```
+
+
+#BEVERAGE_SALES_ANALYSIS
+```{r}
+
+
+
+BOUGHT_BEVERAGE <- SUPERMARKET%>%
+  select(total,month,beverage,location)%>%
+  filter(beverage=="yes")%>%
+  mutate(month=as.integer(month))%>%
+  group_by(location,month)%>%
+  summarise(count= n())%>%
+  arrange(desc(count))
+#THE above beverage sales analysis proved that beverage business was best in the cbd location
+#with beverage total transactions being 289.
+```
+
+
+#CONSUMABLES SALES_ANALYSIS
+```{r}
+
+
+BOUGHT_consumables <- SUPERMARKET%>%
+  select(total,food,consumables,location,supermarket)%>%
+  filter(consumables  =="yes")%>%
+  group_by(location)%>%
+  summarise(count= n())%>%
+  arrange(desc(count))
+#It was noted,from the above analysis that  snacks sales were best in the 
+#cbd location with  a total number of  179 consumables transactions 
+#followed by ongata rongai location then third donholm 
+#location .
+```
+
+
+
+#MALLS_VS_NONMALLS_PERFORMANCE ANALYSIS
+```{r}
+
+
+
+MALLS_VS_NONMALLS_PERFORMANCE <- SUPERMARKET%>%
+  select(total,mall,supermarket)%>%
+  group_by(mall)%>%
+  summarise(mean=mean(total))%>%
+  arrange(desc(mean))
+#From the above analysis it has been noted that supermarket
+#in malls perform better than those in the open market.
+```
+
+#NUMBER_OF_MALLS_IN_A_LOCATION ANALYSIS
+In the above data analysis it is creally proved that the number of malls are 
+more in the locations (juction , followed by donholm then in kilimani).
+This further proves that the level of business performance in this respective 
+locations is optimal compared to other locations.
+ 
+```{r}
+
+
+
+NO_OF_MALLS_IN_A_LOCATION<- SUPERMARKET%>%
+  select(mall,total,location)%>%
+  filter(mall=="yes")%>%
+  group_by(location)%>%
+  summarise (count= n())%>%
+  arrange(desc(count))
+
+```
+
+
+#CREATING A DATASET YEAR AND DATA CLEANING IN COLUMN MONTH
+```{r}
+
+
+
+YEAR<- SUPERMARKET%>%
+select(year,month,total)%>%
+  mutate(month = as.integer(month))%>%
+group_by(year,month)%>%
+summarise (total = sum(total))%>%
+arrange(desc(total))%>% na.omit()
+YEAR
+str(YEAR$year)
+
+index <- which(YEAR$year == "201"|YEAR$year == "2013"|YEAR$year == "2015"|
+        YEAR$year == "2016")
+index <- as.vector(index)
+
+YEAR[index,1] <-  "2017"
+YEAR[c(12,19,24,25,26,27,28,29,30,32,33),1] <-  "2018"
+
+
+YEAR <- YEAR %>% group_by(year, month) %>% summarise(total = sum(total))
+```
+
+  
+  
+  
+   #SUPERMARKET DATASET  VISUALIZATION
+ 
+ 
+ 
+##THE FREQUENCY OF THE DIFFERENT TOTALS OF SHOPPING
+ ###using a histogram
+```{r}
+ggplot(SUPERMARKET,aes(x=total ))+
+   geom_histogram(position="identity",bins=60,fill = "green")+
+   scale_x_log10()+
+   labs(title = "THE FREQUENCY OF THE DIFFERENT TOTALS OF SHOPPING",x="TOTAL MONEY",y="count")+
+   theme(panel.background =element_rect(fill="darkolivegreen"))+
+   theme(plot.title  = element_text(colour ="darkgreen",face = "bold",hjust = 0.5))
+  
+# scale_fill_manual(values = c("green","light green"))
+ 
+```
+ 
+ ##THE FREQUENCY OF THE DIFFERENT TOTALS OF SHOPPING
+ ###using a frequency-polygon
+```{r}
+
+
+ggplot(SUPERMARKET,aes(x=total ))+
+   geom_freqpoly(size=1,position="identity",bins=60,col="green")+
+   scale_x_log10()+
+   labs(title = "THE FREQUENCY OF THE DIFFERENT TOTALS OF SHOPPING",x="TOTAL MONEY",y="count")+
+   theme(panel.background =element_rect(fill="mediumseagreen"))+
+   theme(plot.title  = element_text(colour ="darkgreen",face = "bold",hjust = 0.5))
+ 
+   #It can be noted that most of the prices of the goods bought are in the range of 50 to 1000
+ #shilings.
+ 
+```
+ 
+ #VISUALISATION OF CORRELATION OF TOTAL MONEY VS NO OF ITEMS IN RELATION TO FOODS 
+ #AND NON-FOODS ITEMS
+```{r}
+
+  ggplot(SUPERMARKET, aes(y=total,x=no_of_items,col=food))+
+   geom_point(size = 3 )+geom_smooth(method="lm",se=F)+
+   labs(title = "TOTAL MONEY VS NO OF ITEMS and food / non-food items",y="TOTAL MONEY",x="NO OF ITEMS")+
+   theme(axis.text.x = element_text(angle = 45 ,vjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5 ,face = "bold"))+
+   theme(panel.background  = element_rect(fill = "lightgreen"))
+
+  # It can be induced that  food items are more relatively expensive than  non-food items
+ #CORRELATION
+```
+  
+  
+  #TOTAL MONEY EARNED IN RELATION TO MODE OF PAYMENT USED/TIME_TYPE
+```{r}
+
+
+  
+  ggplot(SUPERMARKET,aes(x=(type),y=total,col=as.factor(time_type)))+
+    geom_boxplot()+
+    scale_y_log10()+
+  labs(title = "TOTAL MONEY EARNED IN RELATION TO MODE OF PAYMENT USED/TIME_TYPE",x="MODE OF PAYMENT",y="TOTAL MONEY EARNED")+
+   labs(col="TIME_TYPE") +
+ theme(plot.title = element_text(hjust=0.5,colour = "darkgreen",face="bold"))+ 
+  theme(panel.background = element_rect(fill="green"))+
+  theme(legend.background = element_rect(fill="palegreen"))+
+  theme(axis.text.x=element_text(angle = 45))
+  
+  #From the above its clear that the credit card is highly used during the night  . 
+  #voucher is the least  performing mode of payment and its used during the evening.
+  
+```
+  
+  #TOTAL MONEY EARNED IN RELATION TO NO OF ITEMS BOUGHT/TIME_TYPE
+```{r}
+
+
+  
+  
+  ggplot(SUPERMARKET,aes(x=(no_of_items),y=total,col=as.factor(time_type)))+
+    geom_smooth(method="lm",se=F)+
+    #scale_y_log10()+
+    labs(title = "TOTAL MONEY EARNED IN RELATION TO NO OF ITEMS BOUGHT/TIME_TYPE",x="NO OF ITEMS BOUGHT",y="TOTAL MONEY EARNED")+
+    labs(col="TIME_TYPE") +
+    theme(plot.title = element_text(hjust=0.5,colour = "darkgreen",face="bold"))+ 
+    theme(panel.background = element_rect(fill="limegreen"))+
+    theme(legend.background = element_rect(fill="palegreen"))+
+    theme(axis.text.x=element_text(angle = 45))
+  
+  #The above shows that more expensive items are bought during the morning bussiness hours and the 
+  #overal business financial performance is highest in the morning transactions.
+```
+  
+  
+  
+ #MONTHS OF THE YEAR PERFOMANCE
+```{r}
+
+
+ 
+ggplot(YEAR,aes(y=total,x=factor(month)))+
+  geom_bar(stat="identity",fill="forestgreen")+
+ labs(x="month",y="total",title = "MONTHS OF THE YEAR PERFORMANCE")+
+  theme(panel.background = element_rect(fill = "limegreen"))
+#It was noted that the most productive MONTHS of the year are the 5th and  6th  month.
+
+
+
+
+```
+
+ #DAYS OF THE MONTH PERFORMANCE
+```{r}
+
+
+ 
+ggplot(DAYS_OF_THE_MONTH_PERFORMANCE,aes(x=factor(day),y=total))+
+  geom_bar(stat="identity",fill="darkolivegreen")+
+  labs(title = "DAYS OF THE MONTH PERFORMANCE",x="day of the month",y="totals MONEY")+
+theme(plot.title = element_text(hjust = 0.5,face = "bold",colour = "darkgreen"))+
+  theme(panel.background = element_rect(fill="lightgreen"))
+#It was noted that the most productive days of the month are the 22nd and  23 rd day.
+
+```
+#SALES OF BEVERAGE DURING THE YEAR
+```{r}
+
+
+
+ggplot(BOUGHT_BEVERAGE,aes(x=factor(month),y=count))+
+  geom_bar(stat = "identity",fill="limegreen")+
+labs(title = "SALES OF BEVERAGE DURING THE YEAR",x="MONTH OF THE YEAR",y="NO OF BAVERAGES")+
+  theme(plot.title = element_text(hjust = 0.5,colour ="green",face = "bold"))+
+  theme(panel.background = element_rect(fill="palegreen"))
+
+ #it can be noticed that the highest no of beverages are bought during the 5th month.
+
+```
+
+#NO OF MALLS IN A LOCATION 
+##using a  bar graph
+```{r}
+ ggplot(NO_OF_MALLS_IN_A_LOCATION, aes(reorder(x=as.factor(location),count), y = (count)))+
+  geom_bar(stat = "identity", position = "dodge",fill="lawngreen")+
+  labs(title = "NO OF MALLS IN A LOCATION",x="LOCATION",y="COUNT OF MALLS")+
+  theme(axis.text.x = element_text(angle = 5,colour = "limegreen" ,vjust = 0.5))+
+theme(plot.title = element_text(hjust = 0.5 ,colour="green",face = "bold"))+
+theme(panel.background = element_rect(fill = "forestgreen"))
+
+```
+#NO OF MALLS IN A LOCATION
+##USING A SCATTER PLOT
+```{r}
+
+
+
+ggplot(NO_OF_MALLS_IN_A_LOCATION,aes(x=location,y=count))+
+  geom_point(size=5,colour="blue")+
+  
+  labs(title = "NO OF MALLS IN A LoCATION ",x="LOCATION",Y="NO OF MALLS")+
+theme(plot.title = element_text(hjust = 0.5,colour = "cyan",face = "bold"))+
+  theme(panel.background = element_rect(fill = "green"))+
+  theme(axis.text.x = element_text(angle = 45,colour = "purple"))+
+theme(plot.background = element_rect(fill="palegreen"))
+#IT has been noted the junction location has the largest no of malls whereas likoni 
+#location has the least no of malls.
+
+```
+
+
+ 

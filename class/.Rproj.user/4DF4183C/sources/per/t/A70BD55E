@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581586047025.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A70BD55E",
+    "lastKnownWriteTime" : 3472618498310025272,
+    "last_content_update" : 1581586047025,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A50D32",
+        "caption" : "supermarket_not_OPEN_24_HR_performance",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=supermarket_not_OPEN_24_HR_performance&cache_key=A50D32",
+        "displayedObservations" : "1",
+        "environment" : "",
+        "expression" : "supermarket_not_OPEN_24_HR_performance",
+        "object" : "supermarket_not_OPEN_24_HR_performance",
+        "preview" : "0",
+        "totalObservations" : "1",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 17,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

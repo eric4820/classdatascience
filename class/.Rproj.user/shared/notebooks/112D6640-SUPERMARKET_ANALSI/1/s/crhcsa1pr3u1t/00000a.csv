@@ -1,0 +1,7 @@
+"0"," ggplot(NO_OF_MALLS_IN_A_LOCATION, aes(reorder(x=as.factor(location),count), y = (count)))+"
+"0","  geom_bar(stat = ""identity"", position = ""dodge"",fill=""lawngreen"")+"
+"0","  labs(title = ""NO OF MALLS IN A LOCATION"",x=""LOCATION"",y=""COUNT OF MALLS"")+"
+"0","  theme(axis.text.x = element_text(angle = 5,colour = ""limegreen"" ,vjust = 0.5))+"
+"0","theme(plot.title = element_text(hjust = 0.5 ,colour=""green"",face = ""bold""))+"
+"0","theme(panel.background = element_rect(fill = ""forestgreen""))"
+"0",""

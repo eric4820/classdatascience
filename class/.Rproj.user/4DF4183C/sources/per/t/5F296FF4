@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581674345974.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5F296FF4",
+    "lastKnownWriteTime" : 2127758115640,
+    "last_content_update" : 1581674345974,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B77E4C70",
+        "caption" : "EATABLES",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=EATABLES&cache_key=B77E4C70",
+        "displayedObservations" : "1",
+        "environment" : "",
+        "expression" : "EATABLES",
+        "object" : "EATABLES",
+        "preview" : "0",
+        "totalObservations" : "1",
+        "variables" : "5"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 29,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

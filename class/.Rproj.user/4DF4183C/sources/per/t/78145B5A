@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582006565080.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "78145B5A",
+    "lastKnownWriteTime" : 1581936213,
+    "last_content_update" : 1582006565080,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F29CCC31",
+        "caption" : "MALLS_VS_NONMALLS_PERFORMANCE",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=MALLS_VS_NONMALLS_PERFORMANCE&cache_key=F29CCC31",
+        "displayedObservations" : 2,
+        "environment" : "",
+        "expression" : "MALLS_VS_NONMALLS_PERFORMANCE",
+        "object" : "MALLS_VS_NONMALLS_PERFORMANCE",
+        "preview" : 0,
+        "totalObservations" : 2,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 41,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
